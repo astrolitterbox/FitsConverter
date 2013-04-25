@@ -3,11 +3,10 @@ import numpy as np
 
 def readFitsTable(filename):
 	hdulist = pyfits.open(filename)
-	#print hdulist.info()
+	print hdulist.info()
 	tbdata = hdulist[1].data
-	#prihdr = hdulist[1].header
-	#fields = prihdr.keys()
-	#print fields
+	prihdr = hdulist[1].header
+	
 	return tbdata
 
 def writeFitsTable(columnNames, data, formats, outputFilename):
