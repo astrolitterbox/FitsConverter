@@ -1,7 +1,7 @@
 import pyfits
 import numpy as np
 
-def readInputFile(filename):
+def readFitsTable(filename):
 	hdulist = pyfits.open(filename)
 	#print hdulist.info()
 	tbdata = hdulist[1].data
